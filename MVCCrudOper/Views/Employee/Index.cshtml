@@ -1,0 +1,40 @@
+﻿@model List<MVCCrudOper.Models.Employee.Employee>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Salary</th>
+            <th scope="col">DataOfBirth</th>
+            <th scope="col">DepartMent</th>
+            <th> </th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+      @foreach(var employee in Model)
+            {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.Email</td>
+                <td>@employee.Salary</td>
+                <td>@employee.DataOfBirth</td>
+                <td>@employee.DepartMent</td>
+                <td>
+
+                    <a href="@Url.Action("View",new { employee.Name})">view</a>
+                     
+                
+                </td>    
+            </tr>
+            }
+
+
+
+ 
+  
+  </tbody>
+</table>

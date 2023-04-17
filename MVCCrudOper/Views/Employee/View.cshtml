@@ -1,0 +1,30 @@
+﻿@model MVCCrudOper.Models.UpdateEmployeeVIewModel
+
+
+<form method="post" action="ViewData">
+	<div class="form-group">
+		<label for="">Name</label>
+		<input type="text" class="form-control" asp-for="Name" readonly>
+	</div>
+	<div class="form-group">
+		<label for="">Email</label>
+		<input type="email" class="form-control" asp-for="Email" >
+	</div>
+	<div class="form-group">
+		<label for="">Salary</label>
+		<input type="number" class="form-control" asp-for="Salary" >
+	</div>
+	<div class="form-group">
+		<label for="">DOB</label>
+		<input type="date" class="form-control" asp-for="DataOfBirth" >
+	</div>
+	<div class="form-group">
+		<label for="">Department</label>
+		<input type="text" class="form-control" asp-for="DepartMent" >
+	</div>
+
+	<button type="submit" class="btn btn-primary">submit</button>
+
+	<button type="submit" class="btn btn-primary" asp-action="Delete" asp-controller="Employee">Delete</button>
+
+</form>
